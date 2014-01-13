@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="593.0" prefWidth="822.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.sevak_avet.demo.Controller">
+  <children>
+    <LineChart fx:id="lineChart" prefHeight="432.0" prefWidth="556.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="126.0" AnchorPane.topAnchor="39.0">
+      <xAxis>
+        <NumberAxis lowerBound="-100.0" side="BOTTOM" tickUnit="1.0" upperBound="100.0" />
+      </xAxis>
+      <yAxis>
+        <NumberAxis lowerBound="-100.0" side="LEFT" tickUnit="1.0" upperBound="100.0" />
+      </yAxis>
+    </LineChart>
+    <Label layoutX="31.0" layoutY="8.0" text="Formula:">
+      <font>
+        <Font name="Doulos SIL" size="20.0" />
+      </font>
+    </Label>
+    <TextField fx:id="formulaField" layoutY="14.0" prefWidth="450.0" AnchorPane.leftAnchor="112.0" AnchorPane.rightAnchor="134.0" />
+    <Button fx:id="btnDrawChart" layoutY="11.0" mnemonicParsing="false" text="Draw chart!" AnchorPane.rightAnchor="21.0">
+      <font>
+        <Font name="Doulos SIL" size="15.0" />
+      </font>
+    </Button>
+    <Slider fx:id="deltaSlider" layoutY="79.0" max="10.0" min="0.01" prefHeight="17.0" prefWidth="112.0" showTickLabels="false" showTickMarks="false" snapToTicks="false" AnchorPane.rightAnchor="14.0" />
+    <Label layoutY="53.0" text="Delta:" AnchorPane.rightAnchor="95.0" />
+    <Label fx:id="deltaValue" layoutY="53.0" prefWidth="-1.0" text="0" AnchorPane.rightAnchor="63.0" />
+    <Slider fx:id="minSlider" layoutY="136.0" majorTickUnit="25.0" max="200.0" min="-200.0" minorTickCount="10" prefHeight="17.0" prefWidth="112.0" rotate="0.0" showTickLabels="false" showTickMarks="false" snapToTicks="false" value="-20.0" AnchorPane.rightAnchor="14.0" />
+    <Label layoutY="110.0" text="Min:" AnchorPane.rightAnchor="102.0" />
+    <Label fx:id="minValue" layoutY="110.0" prefWidth="-1.0" text="0" AnchorPane.rightAnchor="63.0" />
+    <Slider fx:id="maxSlider" layoutY="193.0" max="200.0" min="-200.0" prefHeight="17.0" prefWidth="112.0" showTickLabels="false" showTickMarks="false" snapToTicks="false" AnchorPane.rightAnchor="14.0" />
+    <Label layoutY="167.0" text="Max:" AnchorPane.rightAnchor="101.0" />
+    <Label fx:id="maxValue" layoutY="167.0" prefWidth="-1.0" text="0" AnchorPane.rightAnchor="63.0" />
+    <Button fx:id="btnClear" layoutY="231.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="99.0" text="Clear" AnchorPane.rightAnchor="21.0" />
+  </children>
+</AnchorPane>
